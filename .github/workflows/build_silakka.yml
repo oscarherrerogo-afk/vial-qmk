@@ -1,0 +1,20 @@
+name: Build Silakka Only
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: ghcr.io/qmk/qmk_cli
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - name: Build firmware
+        run: qmk compile -kb silakka54 -km vial
+      - name: Upload UF2
+        uses: actions/upload-artifact@v4
+        with:
+          name: silakka54_vial_fixed
+          path: |
+            **/*.uf2
