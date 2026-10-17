@@ -27,8 +27,8 @@
     "url": "https://github.com/Squalius-cephalus/silakka54",
     "usb": {
         "device_version": "1.0.0",
-        "pid": "0x1212",
-        "vid": "0xFEED"
+        "pid": "0x0541",
+        "vid": "0x1532"
     },
     "layouts": {
         "LAYOUT": {
